@@ -28,7 +28,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+    <!--<a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>-->
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -39,7 +39,7 @@
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#download">Download</a>
+              <!--<a class="nav-link js-scroll-trigger" href="#download">Download</a>-->
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -55,9 +55,10 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-8 mx-auto">
-              <h1 class="brand-heading">Grayscale</h1>
-              <p class="intro-text">A free, responsive, one page Bootstrap theme.
-                <br>Created by Start Bootstrap.</p>
+              <h1 class="brand-heading">John Shneider Painting</h1>
+              <p class="intro-text">Replace all of this text and background with a good
+                <br>picture of your business logo, or I can adjust this text
+                <br> to something spicy lookin and put something else in the background, or keep this background its up to you</p>
               <a href="#about" class="btn btn-circle js-scroll-trigger">
                 <i class="fa fa-angle-double-down animated"></i>
               </a>
@@ -72,20 +73,17 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>About Grayscale</h2>
-            <p>Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
-              <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
-            <p>This theme features stock photos by
-              <a href="http://gratisography.com/">Gratisography</a>
-              along with a custom Google Maps skin courtesy of
-              <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
-            <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with SASS and LESS files for easy customization!</p>
+            <h2>About John Schneider Painting</h2>
+            <p>Insert Info About yourself here, background on business, etc..</p>
+            <p>and anything else you would like</p>
+            <p>this format allows for text to up to here to be able to fit on most devices in one screen, so a short paragraph of 4-5 sentences or less would be perfect</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Download Section -->
+      <!--
     <section id="download" class="download-section content-section text-center">
       <div class="container">
         <div class="col-lg-8 mx-auto">
@@ -95,31 +93,31 @@
         </div>
       </div>
     </section>
-
+    
     <!-- Contact Section -->
     <section id="contact" class="content-section text-center">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2>Contact Start Bootstrap</h2>
-            <p>Feel free to leave us a comment on the
-              <a href="http://startbootstrap.com/template-overviews/grayscale/">Grayscale template overview page</a>
-              on Start Bootstrap to give some feedback about this theme!</p>
+            <h2>Contact Us</h2>
+            <p>Insert info here about how to contact, hours that you are available, days of the week, etc..
+              <br>Also I can put links to any social media pages here (facebook, twitter, instagram, etc..), or email,
+              phone, fax, pager,telegraph connection, carrier pidgeon dropoff location, banana phone, smoke signal location.... the point is anything you need can go here </p>
             <ul class="list-inline banner-social-buttons">
               <li class="list-inline-item">
-                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg">
+                <a href="https://twitter.com/realDonaldTrump" class="btn btn-default btn-lg">
                   <i class="fa fa-twitter fa-fw"></i>
                   <span class="network-name">Twitter</span>
                 </a>
               </li>
-              <li class="list-inline-item">
+              <!--<li class="list-inline-item">
                 <a href="https://github.com/BlackrockDigital/startbootstrap" class="btn btn-default btn-lg">
                   <i class="fa fa-github fa-fw"></i>
                   <span class="network-name">Github</span>
                 </a>
-              </li>
+              </li>-->
               <li class="list-inline-item">
-                <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg">
+                <a href="https://www.youtube.com/watch?v=n_PSKpmSEoo" class="btn btn-default btn-lg">
                   <i class="fa fa-google-plus fa-fw"></i>
                   <span class="network-name">Google+</span>
                 </a>
@@ -130,13 +128,46 @@
       </div>
     </section>
 
+      <script>
+          function myMap() {
+              var mapProp= {
+                center:new google.maps.LatLng(41.434924, -73.129515),
+                zoom:10,
+                };
+        var map=new google.maps.Map(document.getElementById("googlemap"),mapProp);
+    
+        var myCity = new google.maps.Circle({
+            center:{lat: 41.434924,lng: -73.129515},
+            radius:7000,
+            strokeColor:"#FF0000",
+            strokeOpacity:0.8,
+            strokeWeight:2,
+            fillColor:"#FF0000",
+            fillOpacity:0.4,
+            map: map
+        });
+              var infowindow = new google.maps.InfoWindow({
+                  content: '<head><style>#mapPopup{color:black}</style></head>' +
+                  '<body><div id="mapPopup"><p>Insert Info Here About what areas you serve<p></div></body>'
+              });
+              var marker = new google.maps.Marker({
+                  position: {lat: 41.434924,lng: -73.129515},
+                  map: map,
+                  
+              })
+              marker.addListener('click',function(){
+                  infowindow.open(map,marker);
+              });
+          }
+      </script>
+      
     <!-- Map Section -->
-    <div id="map"></div>
+    <div id="googlemap"></div>
 
     <!-- Footer -->
     <footer>
       <div class="container text-center">
-        <p>Copyright &copy; Your Website 2017</p>
+        <p>Copyright &copy; Weenie Hut Juniors 2017</p>
       </div>
     </footer>
 
@@ -148,7 +179,7 @@
     <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-SmdaYkA2cLk7jJjx8Fg8dAVoqVlNr7A&callback=myMap"></script>
 
     <!-- Custom scripts for this template -->
     <script src="/static/js/grayscale.min.js"></script>
